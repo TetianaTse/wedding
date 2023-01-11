@@ -1,0 +1,31 @@
+// colors
+$baner_color: #ffffff;
+$primary: #D3DADD;
+$main_text: #2D2E2E;
+$color_t_2:rgba(45, 46, 46, 0.7);
+$background-nav: #E9ECEE;
+$background_color_main:rgba(211, 218, 221, 0.5);
+$background_color_nav: rgb(233, 236, 238, .0);
+$timer_color: rgba(255, 255, 255, 0.7);
+$form_color:#D3DADD;
+
+//fonts
+$first_font: 'Montserrat', sans-serif;
+$second_font: 'Dancing Script';
+$font_weight_normal: 400;
+$font_weight_slim: 200;
+
+
+//mixin
+
+@mixin pos_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+@mixin img_cover {
+    object-fit: cover;
+    width: 100%;
+}

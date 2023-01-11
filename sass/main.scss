@@ -1,0 +1,586 @@
+@import "var";
+@import "bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: $first_font;
+    font-weight: $font_weight_normal;
+}
+.container-xl {
+    padding: 0 17px;
+}
+.hidden {
+    display: none;
+}
+.title {
+    font-family: $second_font;
+    font-weight: $font_weight_normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: $baner_color;
+}
+.header_title {
+    @include pos_center;
+    & .main_title {
+        font-size: 58px;
+        @include media-breakpoint-up(md) {
+            font-size: 64px;
+            line-height: 32px;
+            color: $baner_color;
+            text-align: center;
+        }
+    }
+}
+
+.header {
+    height: 100vh;
+    background-image: url(../images/img_peasant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+    & .header_block {
+        flex-direction: row-reverse;
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
+    }
+    & .navbar-collapse {
+        background-color:$background-nav;
+        padding: 25px;
+        margin-top: 47px;
+        z-index: 10;
+        @include media-breakpoint-up(md) {
+            background-color: $background_color_nav;
+            padding: 0;
+            margin-top: 0;
+        }
+    }
+    & .navbar {
+        width: 100%;
+        height: 42vh;
+        @include media-breakpoint-up(md) {
+            width: auto;
+            height: auto;
+          
+        }
+    }
+    & .navbar-toggler {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        @include media-breakpoint-up(md){
+            position: relative; 
+        }
+    }
+    & .navbar-nav {
+        text-align: center;
+    }
+    & .nav-link {
+        font-weight: $font_weight_normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: $main_text;
+        @include media-breakpoint-up(md){
+            color: $baner_color;
+            font-size: 17px;
+            line-height: 36px;
+        }
+    }
+    & .nav-link:hover, .nav-link:active, .nav-link:focus, 
+      .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+        font-weight: 500;
+        @include media-breakpoint-up(md){
+        color: $baner_color;
+        }
+    }
+    & .flower_menu {
+        
+        @include media-breakpoint-up(md){
+            display: none;
+        }
+    }
+}
+.logo_block {
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+
+// Timer
+
+.wrapper {
+    text-align: center;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    & img {
+        padding-bottom: 12px;
+    }
+  }
+
+  .countdown .day,
+  .countdown .hour,
+  .countdown .min,
+  .countdown .sec {
+    color: $timer_color;
+    text-align: center;
+    width: 60px;
+  }
+
+  .countdown .day .num,
+  .countdown .hour .num,
+  .countdown .min .num,
+  .countdown .sec .num {
+    display: block;
+    font-weight: $font_weight_normal;
+    font-size: 36px;
+    line-height: 39px;
+    color: $timer_color;
+
+  }
+
+  .countdown .day .word,
+  .countdown .hour .word,
+  .countdown .min .word,
+  .countdown .sec .word {
+    display: block;
+    font-weight: $font_weight_slim;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: $timer_color;
+  }
+
+// Main
+
+.title_section {
+    font-family: $second_font;
+    font-weight: $font_weight_normal;
+    font-size: 40px;
+    line-height: 50px;
+    color: $main_text;
+    width: 63%;
+    margin: 0 auto;
+    @include media-breakpoint-up(sm) {
+        width: 100%;
+    }
+   
+}
+.data_text {
+    font-family: $first_font;
+    font-weight: $font_weight_slim;
+    font-size: 24px;
+    line-height: 50px;
+    color: $main_text;
+    @include media-breakpoint-up(md) {
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+.main_text {
+    font-family: $first_font;
+    font-weight: $font_weight_slim;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main_text;
+    @include media-breakpoint-up(md) {
+        width: 80%;
+        line-height: 31px;
+    }
+}
+.border-bottom_main {
+    width: 53px;
+    border-bottom: 1px solid $main_text;
+}
+.video_block {
+    padding: 134px 0;
+    position: relative;
+    & .vertical-text {
+        font-family: $second_font;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 3px;    
+        color: $main_text;   
+        writing-mode: vertical-rl;
+        @include media-breakpoint-up(md) {
+            line-height: 48px;
+        }
+    }
+    & .text_mod {
+        font-family: $first_font;
+        font-weight: $font_weight_normal;
+        font-size: 16px;
+        line-height: 24px;
+        @include media-breakpoint-up(md) {
+            line-height: 48px;
+        }
+    }
+    & .video_play {
+        position: relative;
+        width: fit-content;
+        & .play {
+            @include pos_center;
+        }
+        & .play:hover {
+            cursor: pointer;
+        }
+        & .video {
+            @include img_cover;
+        }
+    }
+    
+}
+.flower {
+    position: relative;
+}
+.flower::before {
+    content: "";
+    background-image: url(../images/main/flower_left.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5%;
+    left: -8%;
+    width: 23%;
+    height: 23%;
+}
+.flower::after {
+    content: "";
+    background-image: url(../images/main/flower_right.svg);
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 84px;
+    bottom: 6%;
+    right: 0%;
+    @include media-breakpoint-up(md) {
+        width: 100px;
+        height: 128px;
+        bottom: 9%;
+        right: 0%;
+    }
+}
+.when_where {
+    background: $background_color_main;
+
+    & .when_where_cards {
+        & img {
+            @include img_cover;
+        }
+    }   
+}
+.title_section._fl {
+    position: relative;
+}
+.title_section._fl::after {
+    content: url(../images/main/flower_small.svg);
+    position: absolute;
+    top:24px;
+    @include media-breakpoint-up(sm) {
+        top: -33%;
+    }
+}
+// Card
+.card_mod {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+        width: 94%;
+    }
+}
+.title_card_1 {
+    font-family: $first_font;
+    font-style: normal;
+    font-weight: $font_weight_slim;
+    font-size: 14px;
+    line-height: 25px;
+    color: $main_text;
+}
+.title_card_2 {
+    font-family: $second_font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+.text_card {
+    font-family: $first_font;
+    font-style: normal;
+    font-weight: $font_weight_slim;
+    font-size: 16px;
+    line-height: 31px;
+    color: $main_text;
+}
+
+// colors_block
+.colors_block {
+    justify-content: space-around;
+    @include media-breakpoint-up(md) {
+        justify-content: space-between;
+    }
+
+    & img {
+        @include img_cover;
+    }
+}
+.colors_flower {
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+// people
+
+.people {
+    
+    & img {
+        object-fit: cover;
+        margin-bottom: 15px;
+        width: 80%;
+    }
+    
+
+    & .vertical_name {
+        font-family: $first_font;
+        font-weight: $font_weight_normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $main_text;
+        writing-mode: vertical-rl;
+        rotate: (-180deg);
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            line-height: 48px;
+        }
+    }
+    & .bridesmaid {
+        height: 86%;
+        @include media-breakpoint-up(lg) {
+            height: 88%;
+        }
+        &._size {
+            margin-top: 21px;
+            @include media-breakpoint-up(md) {
+                margin-top: 0;
+            }
+        }
+    }
+    & ._place_1 {
+        order: 4;
+        @include media-breakpoint-up(md) {
+            order: 3;
+        }
+    }
+    & ._place_2 {
+        order: 3;
+        @include media-breakpoint-up(md) {
+            order: 4;
+        }
+    }
+}
+.wedding_host {
+    background: $background_color_main;
+    position: relative;
+
+    & .wedding_host_photo {
+        position: relative;
+        order: 2;
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            order: 1;
+            text-align: left;
+        }
+
+        & img {
+            object-fit: cover;
+            width: 80%;
+            @include media-breakpoint-up(sm) {
+                width: auto;
+            }
+        }
+        & .host_img {
+            display: none;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+        }
+        
+        & .host_img_abs {
+            position: relative;
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                top: 9%;
+                left: 7%;
+            }
+        }
+    }
+    & .wedding_host_about {
+        order: 1;
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            order: 2;
+            text-align: left;
+        }
+        & .host_text {
+            font-family: $first_font;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 31px;
+            color: $color_t_2;
+            width: 60%;
+            margin: 0 auto;
+            @include media-breakpoint-up(lg) {
+                order: 2;
+                font-size: 16px;
+                text-align: left;
+                margin: 0;
+            }
+        }
+        ._name {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            margin: 20px 0 30px;
+            @include media-breakpoint-up(lg) {
+                font-size: 24px;
+                text-align: left;
+            }
+        }
+        .wedding_host_link {
+            position: absolute;
+            bottom: 0;
+            left: 53%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            @include media-breakpoint-up(lg) {
+                position: relative;
+                left: 0;
+                margin: 0;
+                transform: none;
+            }
+        }
+    }
+}
+// gallery_block
+
+.gallery {
+    & img {
+        @include img_cover;
+    }
+    & .link_text {
+        font-family: $first_font;
+        font-style: normal;
+        font-weight: $font_weight_normal;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        color: $main_text;
+        padding: 0 20px;
+        border-bottom: 1px solid $main_text;
+    }
+}
+
+// wedding_form_block
+.btn {
+    font-family: $first_font;
+    font-weight: $font_weight_normal;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: $baner_color;
+    padding: 8px 100px;
+    border-radius: 0;
+    text-transform: uppercase;
+    @include media-breakpoint-up(md) {
+        line-height: 50px;
+    }
+}
+.btn:hover {
+    color: $main_text;
+    background-color: $baner_color;
+    border-color: $form_color;
+}
+
+.wedding_form_block {
+    margin: 0 auto;
+    & .form_text {
+        font-family: $first_font;
+        font-weight: $font_weight_slim;
+        font-size: 16px;
+        line-height: 36px;
+        color: $main_text;
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+            line-height: 50px;
+        }
+    }
+    & .form-check-input {
+        margin-top: 10px;
+        @include media-breakpoint-up(md) {
+            margin-top: 15px;
+        }
+    }
+    & .form-check-input:checked {
+        background-color: $form_color;
+        border-color: $form_color;
+    }
+    & .btn_form {
+        position: relative;
+    }
+    .btn_form img {
+        width: 85%;
+        @include media-breakpoint-up(md) {
+            width: auto;
+        }
+
+    }
+    & ._mod {
+        @include pos_center;
+    }
+}
+// footer
+.footer {
+    & .footer_img img {
+        @include img_cover;
+    }
+    & .footer_list {
+        padding: 0;
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            padding-left: 140px;
+            text-align: left;
+        }
+    }
+    & .list li{
+        font-family: $first_font;
+        font-weight: $font_weight_normal;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    & a {
+        color: $main_text;
+    }
+    & a:hover {
+        color: $form_color;
+    }
+}
+
+
+
+
+    
