@@ -12005,6 +12005,26 @@ body {
   }
 }
 
+#color_1 {
+  fill: #D3DADD;
+}
+
+#color_2 {
+  fill: #a3cfbb;
+}
+
+#color_3 {
+  fill: #a6e9d5;
+}
+
+#color_4 {
+  fill: #d2f4ea;
+}
+
+#color_5 {
+  fill: #d1e7dd;
+}
+
 .people img {
   object-fit: cover;
   margin-bottom: 15px;
