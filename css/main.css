@@ -11633,6 +11633,60 @@ body {
   display: none;
 }
 
+.ind_top {
+  padding-top: 69px;
+}
+@media (min-width: 768px) {
+  .ind_top {
+    padding-top: 117px;
+  }
+}
+
+.ind_top_mod {
+  padding-top: 68px;
+}
+@media (min-width: 768px) {
+  .ind_top_mod {
+    padding-top: 134px;
+  }
+}
+
+.ind_top_people {
+  padding-top: 68px;
+}
+@media (min-width: 768px) {
+  .ind_top_people {
+    padding-top: 51px;
+  }
+}
+
+.ind_bottom {
+  padding-bottom: 89px;
+}
+@media (min-width: 768px) {
+  .ind_bottom {
+    padding-bottom: 134px;
+  }
+}
+
+.int_host {
+  padding: 68px 0 104px;
+}
+@media (min-width: 768px) {
+  .int_host {
+    padding: 59px 0;
+  }
+}
+
+.int_footer {
+  padding-bottom: 33px;
+}
+@media (min-width: 768px) {
+  .int_footer {
+    padding-bottom: 49px;
+  }
+}
+
 .title {
   font-family: "Dancing Script";
   font-weight: 400;
@@ -11659,6 +11713,9 @@ body {
     text-align: center;
   }
 }
+.header_title._mod_title {
+  top: 32%;
+}
 
 .header {
   height: 100vh;
@@ -11666,6 +11723,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+}
+.header._mod_banner {
+  height: 70vh;
 }
 .header .header_block {
   flex-direction: row-reverse;
@@ -11702,11 +11762,18 @@ body {
   position: absolute;
   top: 8px;
   right: 0;
+  border: none;
 }
 @media (min-width: 768px) {
   .header .navbar-toggler {
     position: relative;
   }
+}
+.header .navbar-toggler-icon {
+  background-image: url("../images/menu_icon.svg");
+}
+.header .navbar-toggler:focus {
+  box-shadow: none;
 }
 .header .navbar-nav {
   text-align: center;
@@ -11796,15 +11863,53 @@ body {
 .title_section {
   font-family: "Dancing Script";
   font-weight: 400;
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 37px;
+  line-height: 47px;
   color: #2D2E2E;
-  width: 63%;
+  width: 72%;
   margin: 0 auto;
 }
 @media (min-width: 576px) {
   .title_section {
     width: 100%;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.title_marg {
+  margin-bottom: 57px;
+}
+@media (min-width: 576px) {
+  .title_marg {
+    margin-bottom: 103px;
+  }
+}
+
+.title_marg_people {
+  margin-bottom: 33px;
+}
+@media (min-width: 576px) {
+  .title_marg_people {
+    margin-bottom: 83px;
+  }
+}
+
+.title_marg_gal {
+  margin-bottom: 38px;
+}
+@media (min-width: 576px) {
+  .title_marg_gal {
+    margin-bottom: 73px;
+  }
+}
+
+.title_marg_form {
+  margin-bottom: 19px;
+}
+@media (min-width: 576px) {
+  .title_marg_form {
+    margin-bottom: 63px;
   }
 }
 
@@ -11822,17 +11927,35 @@ body {
   }
 }
 
+.data_text_video {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 28px;
+  color: #2D2E2E;
+}
+@media (min-width: 768px) {
+  .data_text_video {
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+
 .main_text {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 16px;
   line-height: 24px;
   color: #2D2E2E;
+  padding-right: 12px;
+  margin: 28px 0;
 }
 @media (min-width: 768px) {
   .main_text {
+    padding: 0;
     width: 80%;
     line-height: 31px;
+    margin: 34px 0;
   }
 }
 
@@ -11939,7 +12062,7 @@ body {
 .title_section._fl::after {
   content: url(../images/main/flower_small.svg);
   position: absolute;
-  top: 24px;
+  bottom: -18%;
 }
 @media (min-width: 576px) {
   .title_section._fl::after {
@@ -11947,13 +12070,12 @@ body {
   }
 }
 
+.card-body {
+  padding: 40px;
+}
+
 .card_mod {
   width: 100%;
-}
-@media (min-width: 768px) {
-  .card_mod {
-    width: 94%;
-  }
 }
 
 .title_card_1 {
@@ -12087,6 +12209,7 @@ body {
   position: relative;
   order: 2;
   text-align: center;
+  margin: 30px 0;
 }
 @media (min-width: 992px) {
   .wedding_host .wedding_host_photo {
@@ -12137,7 +12260,7 @@ body {
   font-size: 17px;
   line-height: 31px;
   color: rgba(45, 46, 46, 0.7);
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
 }
 @media (min-width: 992px) {
@@ -12146,6 +12269,7 @@ body {
     font-size: 16px;
     text-align: left;
     margin: 0;
+    width: 60%;
   }
 }
 .wedding_host .wedding_host_about ._name {
@@ -12163,16 +12287,18 @@ body {
 }
 .wedding_host .wedding_host_about .wedding_host_link {
   position: absolute;
-  bottom: 0;
-  left: 53%;
+  bottom: 7%;
+  left: 52%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
 @media (min-width: 992px) {
   .wedding_host .wedding_host_about .wedding_host_link {
     position: relative;
+    margin-right: 0;
     left: 0;
-    margin: 0;
+    margin-top: 16px;
+    bottom: 0;
     transform: none;
   }
 }
@@ -12180,6 +12306,9 @@ body {
 .gallery img {
   object-fit: cover;
   width: 100%;
+}
+.gallery .gallery_block {
+  margin-bottom: 46px;
 }
 .gallery .link_text {
   font-family: "Montserrat", sans-serif;
@@ -12220,14 +12349,17 @@ body {
   margin: 0 auto;
 }
 .wedding_form_block .form_text {
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 16px;
   line-height: 36px;
   color: #2D2E2E;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .wedding_form_block .form_text {
+    width: 639px;
+    margin: 0 auto;
     font-size: 18px;
     line-height: 50px;
   }
@@ -12263,6 +12395,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.form-control {
+  border-radius: 0;
+  line-height: 2;
+}
+
 .footer .footer_img img {
   object-fit: cover;
   width: 100%;
@@ -12277,6 +12414,9 @@ body {
     text-align: left;
   }
 }
+.footer .list {
+  padding: 40px 0;
+}
 .footer .list li {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -12288,6 +12428,16 @@ body {
 }
 .footer a:hover {
   color: #D3DADD;
+}
+.footer .footer_link {
+  border-top: 1px solid #D3DADD;
+  margin: 0 auto;
+  width: max-content;
+}
+@media (min-width: 992px) {
+  .footer .footer_link {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

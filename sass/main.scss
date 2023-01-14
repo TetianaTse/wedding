@@ -20,6 +20,42 @@ body {
 .hidden {
     display: none;
 }
+.ind_top {
+    padding-top: 69px;
+    @include media-breakpoint-up(md) {
+        padding-top: 117px;
+    }
+}
+.ind_top_mod {
+    padding-top: 68px;
+    @include media-breakpoint-up(md) {
+        padding-top: 134px;
+    }
+}
+.ind_top_people {
+    padding-top: 68px;
+    @include media-breakpoint-up(md) {
+        padding-top: 51px;
+    }
+}
+.ind_bottom {
+    padding-bottom: 89px;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 134px;
+    }
+}
+.int_host {
+    padding: 68px 0 104px;
+    @include media-breakpoint-up(md) {
+        padding: 59px 0;
+    }
+}
+.int_footer {
+    padding-bottom: 33px;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 49px;
+    }
+}
 .title {
     font-family: $second_font;
     font-weight: $font_weight_normal;
@@ -38,6 +74,9 @@ body {
             text-align: center;
         }
     }
+    &._mod_title {
+        top: 32%;
+    }
 }
 
 .header {
@@ -46,6 +85,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    &._mod_banner {
+        height: 70vh;
+    }
     
     & .header_block {
         flex-direction: row-reverse;
@@ -77,9 +119,16 @@ body {
         position: absolute;
         top: 8px;
         right: 0;
+        border: none;
         @include media-breakpoint-up(md){
             position: relative; 
         }
+    }
+    & .navbar-toggler-icon {
+        background-image: url('../images/menu_icon.svg');
+    }
+    & .navbar-toggler:focus {
+        box-shadow: none;
     }
     & .navbar-nav {
         text-align: center;
@@ -168,15 +217,40 @@ body {
 .title_section {
     font-family: $second_font;
     font-weight: $font_weight_normal;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 37px;
+    line-height: 47px;
     color: $main_text;
-    width: 63%;
+    width: 72%;
     margin: 0 auto;
     @include media-breakpoint-up(sm) {
         width: 100%;
+        font-size: 40px;
+        line-height: 50px;
     }
-   
+}
+.title_marg {
+    margin-bottom: 57px;
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 103px;
+    }
+}
+.title_marg_people {
+    margin-bottom: 33px;
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 83px;
+    }
+}
+.title_marg_gal {
+    margin-bottom: 38px;
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 73px;
+    }
+}
+.title_marg_form {
+    margin-bottom: 19px;
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 63px;
+    }
 }
 .data_text {
     font-family: $first_font;
@@ -189,15 +263,30 @@ body {
         line-height: 50px;
     }
 }
+.data_text_video {
+    font-family: $first_font;
+    font-weight: $font_weight_slim;
+    font-size: 16px;
+    line-height: 28px;
+    color: $main_text;
+    @include media-breakpoint-up(md) {
+        font-size: 24px;
+        line-height: 48px;
+    }
+}
 .main_text {
     font-family: $first_font;
     font-weight: $font_weight_slim;
     font-size: 16px;
     line-height: 24px;
     color: $main_text;
+    padding-right: 12px;
+    margin: 28px 0;
     @include media-breakpoint-up(md) {
+        padding: 0;
         width: 80%;
         line-height: 31px;
+        margin: 34px 0;
     }
 }
 .border-bottom_main {
@@ -288,17 +377,17 @@ body {
 .title_section._fl::after {
     content: url(../images/main/flower_small.svg);
     position: absolute;
-    top:24px;
+    bottom: -18%;
     @include media-breakpoint-up(sm) {
         top: -33%;
     }
 }
 // Card
+.card-body {
+    padding: 40px;
+}
 .card_mod {
     width: 100%;
-    @include media-breakpoint-up(md) {
-        width: 94%;
-    }
 }
 .title_card_1 {
     font-family: $first_font;
@@ -415,6 +504,7 @@ body {
         position: relative;
         order: 2;
         text-align: center;
+        margin: 30px 0;
         @include media-breakpoint-up(lg) {
             order: 1;
             text-align: left;
@@ -456,13 +546,14 @@ body {
             font-size: 17px;
             line-height: 31px;
             color: $color_t_2;
-            width: 60%;
+            width: 75%;
             margin: 0 auto;
             @include media-breakpoint-up(lg) {
                 order: 2;
                 font-size: 16px;
                 text-align: left;
                 margin: 0;
+                width: 60%;
             }
         }
         ._name {
@@ -478,14 +569,16 @@ body {
         }
         .wedding_host_link {
             position: absolute;
-            bottom: 0;
-            left: 53%;
+            bottom: 7%;
+            left: 52%;
             margin-right: -50%;
             transform: translate(-50%, -50%);
             @include media-breakpoint-up(lg) {
                 position: relative;
+                margin-right: 0;
                 left: 0;
-                margin: 0;
+                margin-top: 16px;
+                bottom: 0;
                 transform: none;
             }
         }
@@ -496,6 +589,9 @@ body {
 .gallery {
     & img {
         @include img_cover;
+    }
+    & .gallery_block {
+        margin-bottom: 46px;
     }
     & .link_text {
         font-family: $first_font;
@@ -534,12 +630,15 @@ body {
 .wedding_form_block {
     margin: 0 auto;
     & .form_text {
+        width: 100%;
         font-family: $first_font;
         font-weight: $font_weight_slim;
         font-size: 16px;
         line-height: 36px;
         color: $main_text;
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
+            width: 639px;
+            margin: 0 auto;
             font-size: 18px;
             line-height: 50px;
         }
@@ -568,6 +667,10 @@ body {
         @include pos_center;
     }
 }
+.form-control {
+    border-radius: 0;
+    line-height: 2;
+}
 // footer
 .footer {
     & .footer_img img {
@@ -581,6 +684,9 @@ body {
             text-align: left;
         }
     }
+    & .list {
+        padding: 40px 0;
+    }
     & .list li{
         font-family: $first_font;
         font-weight: $font_weight_normal;
@@ -592,6 +698,14 @@ body {
     }
     & a:hover {
         color: $form_color;
+    }
+    & .footer_link {
+        border-top: 1px solid $primary;
+        margin: 0 auto;
+        width: max-content;
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+        }
     }
 }
 
